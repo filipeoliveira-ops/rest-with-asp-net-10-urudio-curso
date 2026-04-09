@@ -1,0 +1,17 @@
+﻿using RestWithASPNET10Erudio.Data.DTO.V1;
+
+namespace RestWithASPNET10Erudio.Services
+{
+	public interface IPersonServices
+	{
+		PersonDTO Create(PersonDTO person);
+		PersonDTO FindByID(long id);
+		List<PersonDTO> FindALL();
+		PersonDTO Update(PersonDTO person);
+		void Delete(long id);
+
+		PersonDTO Disable(long id);
+
+		List<PersonDTO> FindByName(string firstName, string lastName);
+	}
+}
