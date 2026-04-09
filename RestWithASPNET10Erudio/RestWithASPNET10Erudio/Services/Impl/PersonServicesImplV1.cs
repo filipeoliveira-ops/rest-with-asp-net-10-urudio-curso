@@ -21,7 +21,7 @@ namespace RestWithASPNET10Erudio.Services.Impl
 
 		public List<PersonDTO> FindALL()
 		{
-			return _converter.ParseList(_repository.FindALL());
+			return _converter.FindAll.Adapt<List<PersonDTO>>();
 		}
 
 		public PersonDTO FindByID(long id)
@@ -56,7 +56,7 @@ namespace RestWithASPNET10Erudio.Services.Impl
 
 		public List<PersonDTO> FindByName(string firstName, string lastName)
 		{
-			throw new NotImplementedException();
+			return _converter.ParseList(_repository.FindALL());
 		}
 	}
 }
